@@ -2,8 +2,8 @@ export const robots = [
     {
         id: 1,
         name: 'Ivan Lastovko',
-        username: 'Bret',
-        email: 'sincereapril.biz'
+        username: 'Vano',
+        email: 'krasav4ek@ivan.com'
     },
     {
         id: 2,

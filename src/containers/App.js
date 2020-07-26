@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardList from '../components/CardList';
-// import { robots } from './robots';
-import Scroll from '../components/Scroll';
+import { robots } from '../robots';
+import Scroll from '../components/Scroll'; //закомментировать
 import SearchBox from '../components/SearchBox';
 import './App.css';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -12,16 +12,16 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			robots: [],
+			robots: robots, //убрать robots и поставить [] .
 			searchfield: ''
 		}
 	}
-
-	componentDidMount() {
-		fetch('https://jsonplaceholder.typicode.com/users')
-			.then(response => response.json())
-			.then(users => this.setState({ robots: users }));
-	}
+		//РАЗКОММЕНТИРОВАТЬ
+	// componentDidMount() {
+	// 	fetch('https://jsonplaceholder.typicode.com/users')
+	// 		.then(response => response.json())
+	// 		.then(users => this.setState({ robots: users }));
+	// }
 
 	onSearchChange = (event) => {
 		this.setState({ searchfield: event.target.value });
